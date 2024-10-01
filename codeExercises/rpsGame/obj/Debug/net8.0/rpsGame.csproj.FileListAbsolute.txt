@@ -1,0 +1,15 @@
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\rpsGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\rpsGame.AssemblyInfoInputs.cache
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\rpsGame.AssemblyInfo.cs
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\rpsGame.csproj.CoreCompileInputs.cache
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\rpsGame.sourcelink.json
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\bin\Debug\net8.0\rpsGame.exe
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\bin\Debug\net8.0\rpsGame.deps.json
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\bin\Debug\net8.0\rpsGame.runtimeconfig.json
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\bin\Debug\net8.0\rpsGame.dll
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\bin\Debug\net8.0\rpsGame.pdb
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\rpsGame.dll
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\refint\rpsGame.dll
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\rpsGame.pdb
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\rpsGame.genruntimeconfig.cache
+C:\Users\alane\revtraining\liveRepo\alanEspinoza\codeExercises\rpsGame\obj\Debug\net8.0\ref\rpsGame.dll
