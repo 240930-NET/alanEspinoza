@@ -8,16 +8,18 @@ class Program{
 
     public static void Main(string[] args){
 
+        // acceptable entries
         string[] aOptions = {"ROCK", "PAPER", "SCISSORS", "EXIT"};
         var exit = true;
 
         //greetings
         Console.WriteLine("Hello, and welcome to Rock Papers Scissors");
 
+        //check for exit
         while(exit){
         Console.WriteLine("Go ahead and choose either ROCK, PAPER, or SCISSORS or Type EXIT to quit.");
         string? wordChoice = Console.ReadLine();
-
+        //check entry is accetable
         while(!aOptions.Contains(wordChoice)){
             Console.WriteLine("\nInvalid Entry try again! :)");
             Console.WriteLine("Go ahead and choose either ROCK, PAPER, or SCISSORS or Type EXIT to quit.");
@@ -28,7 +30,7 @@ class Program{
             break;    
         }
         Random randomNumGen = new Random();
-        int randomIndex = randomNumGen.Next(2);
+        int randomIndex = randomNumGen.Next(3);
 
         string endResult = wordChoice + aOptions[randomIndex];
         Console.WriteLine($"CPU choose {aOptions[randomIndex]}");
