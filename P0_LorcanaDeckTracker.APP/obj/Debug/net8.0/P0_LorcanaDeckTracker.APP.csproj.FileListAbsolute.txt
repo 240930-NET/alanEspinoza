@@ -1,0 +1,15 @@
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\bin\Debug\net8.0\P0_LorcanaDeckTracker.APP.exe
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\bin\Debug\net8.0\P0_LorcanaDeckTracker.APP.deps.json
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\bin\Debug\net8.0\P0_LorcanaDeckTracker.APP.runtimeconfig.json
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\bin\Debug\net8.0\P0_LorcanaDeckTracker.APP.dll
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\bin\Debug\net8.0\P0_LorcanaDeckTracker.APP.pdb
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\P0_LorcanaDeckTracker.APP.GeneratedMSBuildEditorConfig.editorconfig
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\P0_LorcanaDeckTracker.APP.AssemblyInfoInputs.cache
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\P0_LorcanaDeckTracker.APP.AssemblyInfo.cs
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\P0_LorcanaDeckTracker.APP.csproj.CoreCompileInputs.cache
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\P0_LorcanaDeckTracker.APP.sourcelink.json
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\P0_LorcanaDeckTracker.APP.dll
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\refint\P0_LorcanaDeckTracker.APP.dll
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\P0_LorcanaDeckTracker.APP.pdb
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\P0_LorcanaDeckTracker.APP.genruntimeconfig.cache
+D:\liveRepo\alanEspinoza\P0_LorcanaDeckTracker.APP\obj\Debug\net8.0\ref\P0_LorcanaDeckTracker.APP.dll
