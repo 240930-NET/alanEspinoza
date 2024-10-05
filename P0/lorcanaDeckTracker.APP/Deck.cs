@@ -1,0 +1,11 @@
+//deck class that makes deck object
+
+public class Deck{
+
+    //property tracking the decks name
+    public string? Name{get;set;} 
+
+    //property keeping track of list holding list of card in deck
+    public List<Pair> ListName{get;set;} 
+
+}

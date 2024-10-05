@@ -1,4 +1,11 @@
-﻿//namespace lorcanaDeckTracker.APP;
+﻿//Alan Espinoza
+//10/04/2024
+// Project 0 for 240930 .net training in Revature LLC
+// Project 0 : Lorcana Deck Tracker
+
+//namespaces always give me errors need to figure this out
+//namespace lorcanaDeckTracker.APP;
+
 class Program
 {
     static void Main(string[] args)
