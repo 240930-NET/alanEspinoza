@@ -1,5 +1,5 @@
 
-<div align="justify">
+<div align="center">
   <h1 style="text-align: center;">P0 Lorcana Deck Tracker</h1>
 </div>
 
