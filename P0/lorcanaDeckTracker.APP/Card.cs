@@ -3,14 +3,24 @@
 public class Card{
 
     //property that tracks the color the card is
-    public string? cardColor{get;set;}
+    public string? Color{get;set;}
     //property that tracks card name
-    public string? cardName{get;set;}
+    public string? Name{get;set;}
     //property that tracks if the card game is inkable 
-    public bool cardInkable{get;set;}
+    public bool Inkable{get;set;}
     //property that tracks the type of card it is
-    public string? cardType{get;set;}
+    public string? Type{get;set;}
     //property that tracks the amount of ink needed to play this card
-    public int cardInkCost{get;set;}
+    public int InkCost{get;set;}
 
+
+
+    public Card(string Color, string Name, bool Inkable, string Type, int InkCost){
+        this.Color=Color;
+        this.Name=Name;
+        this.Inkable=Inkable;
+        this.Type=Type;
+        this.InkCost=InkCost;
+    }
+    
 }
