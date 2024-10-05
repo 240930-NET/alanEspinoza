@@ -17,10 +17,12 @@ Lorcana is a new Disney based Trading Card Game (TCG) that I recently got into. 
 I am making a console app using .net applications that will track the deck you are currently building! This deck tracker will help you easily manage your decks by letting you create, edit, save and add decks to your overall desck list.(Disclamer, due to the amount of cards available, there will only be a certain amount of cards that will be implimented to keep this project simple.)
 
 Options Available
+ - Display saved Decks
  - Create Deck
  - Delete Deck
  - Edit Deck (choose what exactly you want to edit)
  - Save Deck
+ - Exit Program
 
 ----
 
