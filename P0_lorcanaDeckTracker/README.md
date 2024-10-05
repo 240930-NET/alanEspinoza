@@ -45,39 +45,45 @@ Below I will list the rules for my deck building tracker.
 # Card Class
 #### Object class for card
 
+```csharp 
 static string cardColor;
-- Valid Colors : Amber, Amethyst Emerald, Ruby, Sapphire, and Steel.
+//Valid Colors : Amber, Amethyst Emerald, Ruby, Sapphire, and Steel.
 
 static string cardName;
-- Valid Names : From validation list.
+//Valid Names : From validation list.
 static boolean cardInkable;
 
 static string cardType;
-- Valid Types : Character, Action, Item, Location.
+//Valid Types : Character, Action, Item, Location.
 
 static int cardInkCost;
-- Valid Ink Cost : 0 -10. (Inclusive)
+//Valid Ink Cost : 0 -10. (Inclusive)
 
 # Pair Class
 static int pairAmount;
- - Valid Amount : 1-4. (Inclusive)
+ //Valid Amount : 1-4. (Inclusive)
 
  static Card pairName;
- - Valid Name : From validation list.
+ //Valid Name : From validation list.
+ ```
+ 
 
 
 # Deck Class
 #### Object class for deck
 
+```csharp
 static string deckName;
-- Valid Names : anything.
+//Valid Names : anything.
 
 static List<pairName p> deckCardList;
-- Valid Pair : any, pair should have been validated before being able to be created.
+//Valid Pair : any, pair should have been validated before being able to be created.
+```
 
 # Menu Class
 #### All user input in this class
 
+```csharp 
 static void menuGreet;
 
 static void menuDisplay;
@@ -88,6 +94,7 @@ static void menuEditDeckDisplay;
 static void menuGetNewDeckDetails;
 
 static void menuGetNewPairDetails;
+```
 
 # Validate Class
 #### Class for validating input
