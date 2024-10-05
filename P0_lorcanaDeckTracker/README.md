@@ -58,8 +58,10 @@ static string cardType;
 
 static int cardInkCost;
 //Valid Ink Cost : 0 -10. (Inclusive)
+```
 
 # Pair Class
+```csharp
 static int pairAmount;
  //Valid Amount : 1-4. (Inclusive)
 
