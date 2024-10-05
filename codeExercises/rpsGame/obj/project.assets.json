@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\codeExercises\\rpsGame\\rpsGame.csproj",
+      "projectUniqueName": "D:\\liveRepo\\alanEspinoza\\codeExercises\\rpsGame\\rpsGame.csproj",
       "projectName": "rpsGame",
-      "projectPath": "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\codeExercises\\rpsGame\\rpsGame.csproj",
+      "projectPath": "D:\\liveRepo\\alanEspinoza\\codeExercises\\rpsGame\\rpsGame.csproj",
       "packagesPath": "C:\\Users\\alane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\codeExercises\\rpsGame\\obj\\",
+      "outputPath": "D:\\liveRepo\\alanEspinoza\\codeExercises\\rpsGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alane\\AppData\\Roaming\\NuGet\\NuGet.Config"
