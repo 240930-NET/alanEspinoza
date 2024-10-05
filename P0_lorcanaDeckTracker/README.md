@@ -1,5 +1,5 @@
 
-<h1 style="text-align: center;">P0 Lorcana Deck Tracker</h1>
+<h1> style="text-align: center;">P0 Lorcana Deck Tracker</h1>
 
 ----
 
