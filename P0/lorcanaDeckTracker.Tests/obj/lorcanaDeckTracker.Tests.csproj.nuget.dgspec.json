@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.Tests\\P0_LorcanaDeckTracker.Tests.csproj": {}
+    "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj": {}
   },
   "projects": {
-    "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.Tests\\P0_LorcanaDeckTracker.Tests.csproj": {
+    "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.Tests\\P0_LorcanaDeckTracker.Tests.csproj",
-        "projectName": "P0_LorcanaDeckTracker.Tests",
-        "projectPath": "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.Tests\\P0_LorcanaDeckTracker.Tests.csproj",
+        "projectUniqueName": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj",
+        "projectName": "lorcanaDeckTracker.Tests",
+        "projectPath": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj",
         "packagesPath": "C:\\Users\\alane\\.nuget\\packages\\",
-        "outputPath": "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.Tests\\obj\\",
+        "outputPath": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alane\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,24 +42,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[17.8.0, )"
-            },
-            "coverlet.collector": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "xunit": {
-              "target": "Package",
-              "version": "[2.5.3, )"
-            },
-            "xunit.runner.visualstudio": {
-              "target": "Package",
-              "version": "[2.5.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

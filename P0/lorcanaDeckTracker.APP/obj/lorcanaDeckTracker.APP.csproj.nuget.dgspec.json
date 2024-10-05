@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.APP\\P0_LorcanaDeckTracker.APP.csproj": {}
+    "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\lorcanaDeckTracker.APP.csproj": {}
   },
   "projects": {
-    "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.APP\\P0_LorcanaDeckTracker.APP.csproj": {
+    "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\lorcanaDeckTracker.APP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.APP\\P0_LorcanaDeckTracker.APP.csproj",
-        "projectName": "P0_LorcanaDeckTracker.APP",
-        "projectPath": "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.APP\\P0_LorcanaDeckTracker.APP.csproj",
+        "projectUniqueName": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\lorcanaDeckTracker.APP.csproj",
+        "projectName": "lorcanaDeckTracker.APP",
+        "projectPath": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\lorcanaDeckTracker.APP.csproj",
         "packagesPath": "C:\\Users\\alane\\.nuget\\packages\\",
-        "outputPath": "D:\\liveRepo\\alanEspinoza\\P0_LorcanaDeckTracker.APP\\obj\\",
+        "outputPath": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alane\\AppData\\Roaming\\NuGet\\NuGet.Config"
