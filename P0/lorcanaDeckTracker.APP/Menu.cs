@@ -47,6 +47,49 @@ public static class Menu{
 
     }
 
+    public static bool DisplayCardListBool(){
+        Console.WriteLine("Do you want to display the list of cards from the above deck?\n(true for yes, false for no)");
+        bool displayCardsBool = bool.Parse(Console.ReadLine());
+        Console.WriteLine("");
+        return displayCardsBool;
+    }
+
+    public static Card GetUserCardInput(){
+        Console.WriteLine("Type in card color:");
+        string newCardColor = Console.ReadLine();
+        Console.WriteLine("Type in card name:");
+        string newCardName = Console.ReadLine();
+        Console.WriteLine("Type true if inkable, false if not:");
+        bool newCardInkable = bool.Parse(Console.ReadLine());
+        Console.WriteLine("Type in card type:");
+        string newCardType = Console.ReadLine();
+        Console.WriteLine("Type in card ink cost:");
+        int newCardInkCost = Int32.Parse(Console.ReadLine());
+        Card newCard = new Card(newCardColor, newCardName, newCardInkable, newCardType, newCardInkCost);
+        return newCard;
+    }
+
+    // since method will be called after getting card info we can use 
+    // card returned from previous method
+    public static Pair GetUserPairInput(Card newPairCard){
+        Console.WriteLine("Type in amount of cards: ");
+        int newPairAmount = Int32.Parse(Console.ReadLine());
+        //Console.WriteLine("Type in card name: ");
+        //string newPairCardName = Console.ReadLine();
+        Pair newPair = new Pair(newPairAmount, newPairCard);
+        return newPair;
+    }
+
+    public static Deck GetUserDeckInput(List<Pair> newListPair){
+        Console.WriteLine("Type in Deck name: ");
+        
+        string newDeckName = Console.ReadLine();
+        Deck newDeck = new Deck(newDeckName, newListPair);
+        return newDeck;
+    }
+
+
+
 
 
 }

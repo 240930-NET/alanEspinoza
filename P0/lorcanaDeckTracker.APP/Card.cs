@@ -22,5 +22,19 @@ public class Card{
         this.Type=Type;
         this.InkCost=InkCost;
     }
+
+    public override string ToString(){
+        return $"Color group: {Color}\n Card Name: {Name}\n Inkable: {Inkable}\n Type: {Type}\n Ink Cost: {InkCost}\n";
+    }
     
+
+    // public void GetCardInfo(){
+    //     Console.WriteLine("Type in card color group:");
+    //     string colorInput = Console.ReadLine();
+
+    // }
+
+    public string getCardName(){
+        return Name;
+    }
 }

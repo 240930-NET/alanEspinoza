@@ -17,4 +17,8 @@ public class Deck{
         return this.Name;
     }
 
+    public List<Pair> getDeckCardList(){
+        return this.ListName;
+    }
+
 }

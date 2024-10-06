@@ -50,7 +50,9 @@ class Program
                     Function.DisplayDeck(DeckList);
                     break;
                 case 2:
-                    Function.CreateDeck();
+                    List<Pair> tempPairList = new List<Pair>();
+                    Deck newProgramDeck = Function.CreateDeck(tempPairList);
+                    DeckList.Add(newProgramDeck);
                     break;
                 case 3:
                     Function.EditDeck();

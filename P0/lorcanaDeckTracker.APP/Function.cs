@@ -6,23 +6,47 @@ public static class Function{
     public static void DisplayDeck(List<Deck> DeckListGiven){
         Console.WriteLine("You are Displaying your Decks!\n");
 
-        var table = new ConsoleTable("0");
+        //var table = new ConsoleTable("Deck List");
         foreach(Deck d in DeckListGiven){
             string name = d.getDeckName();
-            table.AddRow($"{name}");
+            var table = new ConsoleTable($"{name}");
+            table.Write(Format.Alternative);
+            Console.WriteLine();
+            bool dCards = Menu.DisplayCardListBool();
+            if(dCards) DisplayCardsInDeck(d);
         }
-        table.Write(Format.Alternative);
+    }
+
+    public static void DisplayCardsInDeck(Deck d){
+        string dName = d.getDeckName();
+        Console.WriteLine($"You are displaying your Cards from your {dName} deck.");
+
+        var table = new ConsoleTable("Card List");
+        List<Pair> cardList = d.getDeckCardList();
+        foreach(Pair p in cardList){
+            Card cardInfo = p.getCard();
+            int cardCount = p.getAmount();
+            string cName = cardInfo.getCardName();
+            table.AddRow($"{cName} : {cardCount}");
+        }
+        table.Write();
         Console.WriteLine();
     }
 
-    // public override static void DisplayDeck(List<Pair> pList){
-    //     foreach(Pair p in pList){
-            
-    //     }
-    // }
-
-    public static void CreateDeck(){
-        Console.WriteLine("You Created a Deck!\n");
+    public static Deck CreateDeck(List<Pair> givenPairList){
+        int sum = 0;
+        Console.WriteLine("You are creating a Deck!\n");
+        do{
+        Card userCard = Menu.GetUserCardInput();
+        Pair userPair = Menu.GetUserPairInput(userCard);
+        givenPairList.Add(userPair);
+            foreach(Pair p in givenPairList){
+                sum = sum + p.getAmount();
+            }
+        }
+        while(sum<=60);
+        Deck userDeck = Menu.GetUserDeckInput(givenPairList);
+        return userDeck;
     }
 
     public static void DeleteDeck(){

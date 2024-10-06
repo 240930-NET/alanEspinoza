@@ -12,4 +12,12 @@ public class Pair{
 
     }
 
+    public Card getCard(){
+        return CardName;
+    }
+
+    public int getAmount(){
+        return Amount;
+    }
+
 }
