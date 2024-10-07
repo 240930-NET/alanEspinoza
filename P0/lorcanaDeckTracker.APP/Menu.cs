@@ -88,6 +88,13 @@ public static class Menu{
         return newDeck;
     }
 
+    public static int GetUserKeepAddingCardsInput(int limit){
+        bool keepGoing = bool.Parse(Console.ReadLine());
+        if(keepGoing)limit = limit+1;
+        else limit = 1;
+        return limit;
+    }
+
 
 
 

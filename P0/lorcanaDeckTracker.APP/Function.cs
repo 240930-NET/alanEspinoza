@@ -35,16 +35,27 @@ public static class Function{
 
     public static Deck CreateDeck(List<Pair> givenPairList){
         int sum = 0;
+        int cc = 0;
+        int limit = 60;
         Console.WriteLine("You are creating a Deck!\n");
         do{
+        sum = 0;
         Card userCard = Menu.GetUserCardInput();
         Pair userPair = Menu.GetUserPairInput(userCard);
         givenPairList.Add(userPair);
+        cc = cc +1;
             foreach(Pair p in givenPairList){
                 sum = sum + p.getAmount();
             }
+            if(sum>=limit){
+                Console.WriteLine("You have reached the minimum card count required."); 
+                Console.WriteLine("Do you want to keep adding cards? Are stop here?");
+                limit = sum;
+                limit = Menu.GetUserKeepAddingCardsInput(limit); 
+            }
+        Console.WriteLine($"You currently have {sum} total amount of cards with {cc} unique cards.");
         }
-        while(sum<=60);
+        while(sum<=limit);
         Deck userDeck = Menu.GetUserDeckInput(givenPairList);
         return userDeck;
     }
