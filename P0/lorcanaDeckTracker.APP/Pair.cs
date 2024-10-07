@@ -12,6 +12,9 @@ public class Pair{
 
     }
 
+    public Pair(){
+    }
+
     public Card getCard(){
         return CardName;
     }

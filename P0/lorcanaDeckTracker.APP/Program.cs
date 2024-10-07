@@ -58,7 +58,7 @@ class Program
                     Function.EditDeck();
                     break;
                 case 4:
-                    Function.DeleteDeck();
+                    Function.DeleteDeck(DeckList);
                     break;
                 case 5:
                     Function.SaveDeck();

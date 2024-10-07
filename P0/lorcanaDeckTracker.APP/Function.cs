@@ -49,7 +49,7 @@ public static class Function{
             }
             if(sum>=limit){
                 Console.WriteLine("You have reached the minimum card count required."); 
-                Console.WriteLine("Do you want to keep adding cards? Are stop here?");
+                Console.WriteLine("Do you want to keep adding cards? Are stop here?\n true to keep adding, flase to stop");
                 limit = sum;
                 limit = Menu.GetUserKeepAddingCardsInput(limit); 
             }
@@ -60,8 +60,34 @@ public static class Function{
         return userDeck;
     }
 
-    public static void DeleteDeck(){
-        Console.WriteLine("You Deleted a Deck!\n");
+    public static void DeleteDeck(List<Deck> DeckList){
+        Console.WriteLine("You are Deleting a Deck!\n");
+
+        bool DeckNameReal =false;
+        string UserDeckNameDelete;
+        Deck DeckDelete = new Deck();
+        do{
+            UserDeckNameDelete = Menu.GetDeckNameDelete();
+            foreach(Deck d in DeckList){
+                if(d.getDeckName()==UserDeckNameDelete){
+                    DeckNameReal = true;
+                    DeckDelete = d;
+
+                }
+            }
+            //string temp = DeckList.Exists(n => n.Name = UserDeckNameDelete);
+            
+            //DeckNameReal = bool.Parse(DeckList.Exists(n => n.Name = UserDeckNameDelete));
+            if(!DeckNameReal){
+                 Console.WriteLine("\nDeck Name not found in list, try again:");
+            }
+        }
+        while(!DeckNameReal);
+        int IndexRemove = DeckList.IndexOf(DeckDelete);
+        DeckList.RemoveAt(IndexRemove);
+        Console.WriteLine($"\nYou just deleted your {UserDeckNameDelete} deck\n");
+
+
     }
     public static void EditDeck(){
         Console.WriteLine("You Edited a Deck!\n");

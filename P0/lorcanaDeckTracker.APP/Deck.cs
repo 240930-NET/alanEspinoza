@@ -11,7 +11,15 @@ public class Deck{
     public Deck(string Name, List<Pair> ListName){
         this.Name = Name;
         this.ListName = ListName;
+    }
+
+    public Deck(string Name){
+        this.Name = Name;
+        this.ListName = new List<Pair>();
     } 
+
+    public Deck(){
+    }
 
     public string getDeckName(){
         return this.Name;

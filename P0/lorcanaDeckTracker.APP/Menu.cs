@@ -95,6 +95,12 @@ public static class Menu{
         return limit;
     }
 
+    public static string GetDeckNameDelete(){
+        Console.WriteLine("Type in the name of the deck you want to delete:");
+        string DeckDeleteName = Console.ReadLine();
+        return DeckDeleteName;
+    }
+
 
 
 

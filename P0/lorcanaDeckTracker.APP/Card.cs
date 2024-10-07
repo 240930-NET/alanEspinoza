@@ -23,6 +23,9 @@ public class Card{
         this.InkCost=InkCost;
     }
 
+    public Card(){
+    }
+
     public override string ToString(){
         return $"Color group: {Color}\n Card Name: {Name}\n Inkable: {Inkable}\n Type: {Type}\n Ink Cost: {InkCost}\n";
     }
