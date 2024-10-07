@@ -76,7 +76,6 @@ public static class Function{
                 }
             }
             //string temp = DeckList.Exists(n => n.Name = UserDeckNameDelete);
-            
             //DeckNameReal = bool.Parse(DeckList.Exists(n => n.Name = UserDeckNameDelete));
             if(!DeckNameReal){
                  Console.WriteLine("\nDeck Name not found in list, try again:");

@@ -1,9 +1,9 @@
 ﻿namespace lorcanaDeckTracker.Tests;
 
-class Program
+public class UnitTest0
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
+    [Fact(Skip = "Test Template")]
+    public void Test0(){
+        
     }
 }
