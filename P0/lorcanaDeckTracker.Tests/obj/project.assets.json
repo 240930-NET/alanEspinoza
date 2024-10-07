@@ -94,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj",
       "projectName": "lorcanaDeckTracker.Tests",
-      "projectPath": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj",
+      "projectPath": "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj",
       "packagesPath": "C:\\Users\\alane\\.nuget\\packages\\",
-      "outputPath": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\obj\\",
+      "outputPath": "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alane\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -113,8 +113,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\lorcanaDeckTracker.APP.csproj": {
-              "projectPath": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\lorcanaDeckTracker.APP.csproj"
+            "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\lorcanaDeckTracker.APP.csproj": {
+              "projectPath": "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.APP\\lorcanaDeckTracker.APP.csproj"
             }
           }
         }

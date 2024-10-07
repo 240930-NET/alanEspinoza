@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/42qepRKlW0=",
+  "dgSpecHash": "rEUWLy+xSO0=",
   "success": true,
-  "projectFilePath": "D:\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj",
+  "projectFilePath": "C:\\Users\\alane\\revtraining\\liveRepo\\alanEspinoza\\P0\\lorcanaDeckTracker.Tests\\lorcanaDeckTracker.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alane\\.nuget\\packages\\consoletables\\2.6.2\\consoletables.2.6.2.nupkg.sha512",
     "C:\\Users\\alane\\.nuget\\packages\\wcwidth\\1.0.0\\wcwidth.1.0.0.nupkg.sha512"
