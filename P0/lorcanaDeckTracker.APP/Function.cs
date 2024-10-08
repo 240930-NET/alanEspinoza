@@ -8,8 +8,7 @@ public static class Function{
 
         //var table = new ConsoleTable("Deck List");
         foreach(Deck d in DeckListGiven){
-            string name = d.getDeckName();
-            var table = new ConsoleTable($"{name}");
+            var table = new ConsoleTable($"{d.Name}");
             table.Write(Format.Alternative);
             Console.WriteLine();
             bool dCards = Menu.DisplayCardListBool();
@@ -18,16 +17,13 @@ public static class Function{
     }
 
     public static void DisplayCardsInDeck(Deck d){
-        string dName = d.getDeckName();
-        Console.WriteLine($"You are displaying your Cards from your {dName} deck.");
+        //string dName = d.getDeckName();
+        Console.WriteLine($"You are displaying your Cards from your {d.Name} deck.");
 
         var table = new ConsoleTable("Card List");
         List<Pair> cardList = d.getDeckCardList();
         foreach(Pair p in cardList){
-            Card cardInfo = p.getCard();
-            int cardCount = p.getAmount();
-            string cName = cardInfo.getCardName();
-            table.AddRow($"{cName} : {cardCount}");
+            table.AddRow($"{p.CardName.Name} : {p.Amount} : {p.CardName.Color}");
         }
         table.Write();
         Console.WriteLine();
@@ -56,40 +52,56 @@ public static class Function{
         Console.WriteLine($"You currently have {sum} total amount of cards with {cc} unique cards.");
         }
         while(sum<=limit);
-        Deck userDeck = Menu.GetUserDeckInput(givenPairList);
+        Deck userDeck = Menu.GetUserNewDeckInput(givenPairList);
         return userDeck;
     }
 
     public static void DeleteDeck(List<Deck> DeckList){
         Console.WriteLine("You are Deleting a Deck!\n");
 
-        bool DeckNameReal =false;
-        string UserDeckNameDelete;
         Deck DeckDelete = new Deck();
-        do{
-            UserDeckNameDelete = Menu.GetDeckNameDelete();
-            foreach(Deck d in DeckList){
-                if(d.getDeckName()==UserDeckNameDelete){
-                    DeckNameReal = true;
-                    DeckDelete = d;
+        DeckDelete = Validate.DeckNameIsReal(DeckList);
 
-                }
-            }
-            //string temp = DeckList.Exists(n => n.Name = UserDeckNameDelete);
-            //DeckNameReal = bool.Parse(DeckList.Exists(n => n.Name = UserDeckNameDelete));
-            if(!DeckNameReal){
-                 Console.WriteLine("\nDeck Name not found in list, try again:");
-            }
-        }
-        while(!DeckNameReal);
         int IndexRemove = DeckList.IndexOf(DeckDelete);
         DeckList.RemoveAt(IndexRemove);
-        Console.WriteLine($"\nYou just deleted your {UserDeckNameDelete} deck\n");
-
+        Console.WriteLine($"\nYou just deleted your {DeckDelete.getDeckName()} deck\n");
 
     }
-    public static void EditDeck(){
-        Console.WriteLine("You Edited a Deck!\n");
+    public static void EditDeck(List<Deck> DeckList){
+        int option;
+        Pair PairEdit = new Pair();
+        Pair PairNew = new Pair();
+        Card CardNew = new Card();
+        Console.WriteLine("You are Editing a Deck!\n");
+
+        Deck DeckEdit = new Deck();
+        DeckEdit = Validate.DeckNameIsReal(DeckList);
+        Menu.DisplayEditOptions();
+        option = Menu.GetUserOption();
+
+        switch(option){
+            case 1:
+                PairEdit = Validate.CardNameIsReal(DeckEdit.ListName);
+                PairNew = Menu.GetUserPairInput(PairEdit.CardName);
+                DeckEdit.ListName.Remove(PairEdit);
+                DeckEdit.ListName.Add(PairNew);
+                //PairEdit = PairNew;
+                break;
+            case 2:
+                PairEdit = Validate.CardNameIsReal(DeckEdit.ListName);
+                DeckEdit.ListName.Remove(PairEdit);
+                break;
+            case 3:
+                CardNew = Menu.GetUserCardInput();
+                PairNew = Menu.GetUserPairInput(CardNew);
+                DeckEdit.ListName.Add(PairNew);
+                break;
+            case 4:
+                string? newDeckName = Menu.GetDeckName();
+                DeckEdit.Name = newDeckName;
+                break;
+        }
+
     }
     public static void SaveDeck(){
         Console.WriteLine("You Saved all new changes!\n");

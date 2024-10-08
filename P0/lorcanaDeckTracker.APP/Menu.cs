@@ -80,7 +80,7 @@ public static class Menu{
         return newPair;
     }
 
-    public static Deck GetUserDeckInput(List<Pair> newListPair){
+    public static Deck GetUserNewDeckInput(List<Pair> newListPair){
         Console.WriteLine("Type in Deck name: ");
         
         string newDeckName = Console.ReadLine();
@@ -95,15 +95,28 @@ public static class Menu{
         return limit;
     }
 
-    public static string GetDeckNameDelete(){
-        Console.WriteLine("Type in the name of the deck you want to delete:");
+    public static string GetDeckName(){
+        Console.WriteLine("Type in the name of the deck:");
         string DeckDeleteName = Console.ReadLine();
         return DeckDeleteName;
     }
 
+    public static void DisplayEditOptions(){
+        var table = new ConsoleTable("Pick your edit option from below:");
+        table.AddRow("1 : Edit card from card list");
+        table.AddRow("2 : Delete card from list");
+        table.AddRow("3 : Add card from list");
+        table.AddRow("4 : Rename Deck");
 
-
-
+        //different format for more asthetic experience
+        table.Write(Format.Minimal);
+        Console.WriteLine();
+    }
+    public static string GetPairName(){
+        Console.WriteLine("Type in the name of the Card:");
+        string CardName = Console.ReadLine();
+        return CardName;
+    }
 
 }
 

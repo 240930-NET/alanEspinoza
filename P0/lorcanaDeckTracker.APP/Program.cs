@@ -55,7 +55,7 @@ class Program
                     DeckList.Add(newProgramDeck);
                     break;
                 case 3:
-                    Function.EditDeck();
+                    Function.EditDeck(DeckList);
                     break;
                 case 4:
                     Function.DeleteDeck(DeckList);
