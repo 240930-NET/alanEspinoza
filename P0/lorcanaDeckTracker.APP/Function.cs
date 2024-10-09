@@ -29,7 +29,8 @@ public static class Function{
         Console.WriteLine();
     }
 
-    public static Deck CreateDeck(List<Pair> givenPairList){
+    public static List<Deck> CreateDeck(List<Deck> DeckList){
+        List<Pair> givenPairList = new List<Pair>();
         int sum = 0;
         int cc = 0;
         int limit = 60;
@@ -53,7 +54,8 @@ public static class Function{
         }
         while(sum<=limit);
         Deck userDeck = Menu.GetUserNewDeckInput(givenPairList);
-        return userDeck;
+        DeckList.Add(userDeck);
+        return DeckList;
     }
 
     public static void DeleteDeck(List<Deck> DeckList){
@@ -103,8 +105,9 @@ public static class Function{
         }
 
     }
-    public static void SaveDeck(){
+    public static void SaveDeck(List<Deck> DeckList){
         Console.WriteLine("You Saved all new changes!\n");
+        Serialize.SerializeDeckInfo(DeckList);
     }
 
 }
