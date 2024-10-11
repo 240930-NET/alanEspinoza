@@ -3,7 +3,7 @@
 public class Pair{
 
     public int Amount{get;set;} =1;
-    public Card? CardName{get;set;}
+    public Card CardName{get;set;}
 
     public Pair(int Amount, Card CardName){
 

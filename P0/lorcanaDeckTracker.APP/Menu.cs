@@ -32,14 +32,13 @@ public static class Menu{
 
     //Method that asks for user input
     public static int GetUserOption(){
-        string? option;
         Console.WriteLine("Type in option from displayed above :");
-        option = Console.ReadLine();
+        string? option =Console.ReadLine();
         while(!Validate.OptionsIsValid(option)){
             Console.WriteLine("Invalid try again:");
             option = Console.ReadLine();
         }
-        int x = Int32.Parse(option);
+        int x = Int32.Parse(option!);
         Console.WriteLine("");
         return x;
     }
@@ -60,7 +59,7 @@ public static class Menu{
             Console.WriteLine("Invalid try again:");
             cardDisplayOption = Console.ReadLine();
         }
-        bool displayCardsBool = bool.Parse(cardDisplayOption);
+        bool displayCardsBool = bool.Parse(cardDisplayOption!);
         Console.WriteLine("");
         return displayCardsBool;
     }
@@ -79,12 +78,12 @@ public static class Menu{
         //still waiting to implement
 
         Console.WriteLine("Type true if inkable, false if not:");
-        string newCardInkableString = Console.ReadLine();
+        string? newCardInkableString = Console.ReadLine();
         while(!Validate.OptionIsTrueOrFalse(newCardInkableString)){
             Console.WriteLine("Invalid option try again:");
             newCardInkableString = Console.ReadLine();
         }
-        bool newCardInkable = bool.Parse(newCardInkableString);
+        bool newCardInkable = bool.Parse(newCardInkableString!);
 
         Console.WriteLine("Type in card type:");
         string? newCardType = Console.ReadLine();
@@ -99,8 +98,8 @@ public static class Menu{
             Console.WriteLine("Invalid ink cost try again:");
             newCardInkCostString = Console.ReadLine();
         }
-        int newCardInkCost = Int32.Parse(newCardInkCostString);
-        Card newCard = new Card(newCardColor, newCardName, newCardInkable, newCardType, newCardInkCost);
+        int newCardInkCost = Int32.Parse(newCardInkCostString!);
+        Card newCard = new Card(newCardColor!, newCardName!, newCardInkable, newCardType!, newCardInkCost);
         return newCard;
     }
 
@@ -108,12 +107,12 @@ public static class Menu{
     // card returned from previous method
     public static Pair GetUserPairInput(Card newPairCard){
         Console.WriteLine("Type in amount of cards: ");
-        string newPairAmountString = Console.ReadLine();
+        string? newPairAmountString = Console.ReadLine();
         while(!Validate.InkCostValid(newPairAmountString)){
             Console.WriteLine("Invalid color try again:");
             newPairAmountString = Console.ReadLine();
         }
-        int newPairAmount = Int32.Parse(newPairAmountString);
+        int newPairAmount = Int32.Parse(newPairAmountString!);
         Pair newPair = new Pair(newPairAmount, newPairCard);
         return newPair;
     }
@@ -122,7 +121,7 @@ public static class Menu{
         Console.WriteLine("Type in Deck name: ");
         
         string? newDeckName = Console.ReadLine();
-        Deck newDeck = new Deck(newDeckName, newListPair);
+        Deck newDeck = new Deck(newDeckName!, newListPair);
         return newDeck;
     }
 
@@ -133,7 +132,7 @@ public static class Menu{
             Console.WriteLine("Invalid try again:");
             keepAddingCardsOption = Console.ReadLine();
         }
-        bool keepAddingCardsOptionBool = bool.Parse(keepAddingCardsOption);
+        bool keepAddingCardsOptionBool = bool.Parse(keepAddingCardsOption!);
         if(keepAddingCardsOptionBool)limit = limit+1;
         else limit = 1;
         return limit;
@@ -142,7 +141,7 @@ public static class Menu{
     public static string GetDeckName(){
         Console.WriteLine("Type in the name of the deck:");
         string? DeckDeleteName = Console.ReadLine();
-        return DeckDeleteName;
+        return DeckDeleteName!;
     }
 
     public static void DisplayEditOptions(){
@@ -160,7 +159,7 @@ public static class Menu{
     public static string GetPairName(){
         Console.WriteLine("Type in the name of the Card:");
         string? CardName = Console.ReadLine();
-        return CardName;
+        return CardName!;
     }
 
         public static int GetUserEditOption(){
@@ -171,7 +170,7 @@ public static class Menu{
             Console.WriteLine("Invalid try again:");
             option = Console.ReadLine();
         }
-        int x = Int32.Parse(option);
+        int x = Int32.Parse(option!);
         Console.WriteLine("");
         return x;
     }

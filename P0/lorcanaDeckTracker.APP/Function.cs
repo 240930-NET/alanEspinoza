@@ -17,7 +17,6 @@ public static class Function{
     }
 
     public static void DisplayCardsInDeck(Deck d){
-        //string dName = d.getDeckName();
         Console.WriteLine($"You are displaying your Cards from your {d.Name} deck.");
 
         var table = new ConsoleTable("Card Name",  "Amount" , "Card Color", "Inkability", "Card Type", "Ink Cost");
@@ -84,7 +83,7 @@ public static class Function{
         switch(option){
             case 1:
                 PairEdit = Validate.CardNameIsReal(DeckEdit.ListName);
-                PairNew = Menu.GetUserPairInput(PairEdit.CardName);
+                PairNew = Menu.GetUserPairInput(PairEdit.CardName!);
                 DeckEdit.ListName.Remove(PairEdit);
                 DeckEdit.ListName.Add(PairNew);
                 //PairEdit = PairNew;
