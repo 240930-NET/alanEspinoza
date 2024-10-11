@@ -68,6 +68,7 @@ public static class Validate{
 
     public static bool OptionIsTrueOrFalse(string? option){
         option = option.ToLower();
+        option = option.Trim();
         string[] validOptions = {"true", "false"};
         int pos = Array.IndexOf(validOptions, option);
         if(pos>-1){
@@ -77,6 +78,7 @@ public static class Validate{
     }
     public static bool ColorIsValid(string? color){
         color = color.ToLower();
+        color = color.Trim();
         string[] validColors = {"amethyst", "emerald", "ruby", "steel", "amber", "sapphire"};
         int pos = Array.IndexOf(validColors, color);
         if(pos>-1){
@@ -90,6 +92,7 @@ public static class Validate{
 
     public static bool CardTypeIsValid(string? cardType){
         cardType = cardType.ToLower();
+        cardType = cardType.Trim();
         string[] validCardTypes = {"character","action","location","item"};
         int pos = Array.IndexOf(validCardTypes, cardType);
         if(pos>-1){

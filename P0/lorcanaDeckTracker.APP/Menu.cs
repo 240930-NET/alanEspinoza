@@ -64,7 +64,7 @@ public static class Menu{
         return displayCardsBool;
     }
 
-    public static Card GetUserCardInput(){
+    public static Card GetUserCardInput(List<string> cardNameList, List<string> colorlist){
 
         Console.WriteLine("Type in card color:");
         string? newCardColor = Console.ReadLine();
@@ -72,9 +72,18 @@ public static class Menu{
             Console.WriteLine("Invalid color try again:");
             newCardColor = Console.ReadLine();
         }
+        colorlist = colorlist.Distinct().ToList();
+        while(colorlist.Count==2&&!colorlist.Contains(newCardColor)){ // check only two colors in deck
+            Console.WriteLine("Invalid color try again:");
+            newCardColor = Console.ReadLine();
+        }
 
         Console.WriteLine("Type in card name:");
         string? newCardName = Console.ReadLine();
+        while(cardNameList.Contains(newCardName)){
+            Console.WriteLine("Duplicate card, try again:");
+            newCardName = Console.ReadLine();
+        }
         //still waiting to implement
 
         Console.WriteLine("Type true if inkable, false if not:");
@@ -108,8 +117,8 @@ public static class Menu{
     public static Pair GetUserPairInput(Card newPairCard){
         Console.WriteLine("Type in amount of cards: ");
         string? newPairAmountString = Console.ReadLine();
-        while(!Validate.InkCostValid(newPairAmountString)){
-            Console.WriteLine("Invalid color try again:");
+        while(!Validate.CardAmountValid(newPairAmountString)){
+            Console.WriteLine("Invalid card amount try again:");
             newPairAmountString = Console.ReadLine();
         }
         int newPairAmount = Int32.Parse(newPairAmountString!);

@@ -29,6 +29,8 @@ public static class Function{
     }
 
     public static List<Deck> CreateDeck(List<Deck> DeckList){
+        List<string> colorlist = new List<string>();
+        List<string> cardNameList = new List<string>();
         List<Pair> givenPairList = new List<Pair>();
         int sum = 0;
         int cc = 0;
@@ -36,7 +38,9 @@ public static class Function{
         Console.WriteLine("You are creating a Deck!\n");
         do{
         sum = 0;
-        Card userCard = Menu.GetUserCardInput();
+        Card userCard = Menu.GetUserCardInput(cardNameList, colorlist);
+        cardNameList.Add(userCard.Name);
+        colorlist.Add(userCard.Color);
         Pair userPair = Menu.GetUserPairInput(userCard);
         givenPairList.Add(userPair);
         cc = cc +1;
@@ -45,7 +49,7 @@ public static class Function{
             }
             if(sum>=limit){
                 Console.WriteLine("You have reached the minimum card count required."); 
-                Console.WriteLine("Do you want to keep adding cards? Are stop here?\n true to keep adding, flase to stop");
+                Console.WriteLine("Do you want to keep adding cards? Are stop here?\n true to keep adding, false to stop");
                 limit = sum;
                 limit = Menu.GetUserKeepAddingCardsInput(limit); 
             }
@@ -73,10 +77,18 @@ public static class Function{
         Pair PairEdit = new Pair();
         Pair PairNew = new Pair();
         Card CardNew = new Card();
+        List<string> cardNameList= new List<string>(); 
+        List<string> cardColorList= new List<string>(); 
         Console.WriteLine("You are Editing a Deck!\n");
 
         Deck DeckEdit = new Deck();
         DeckEdit = Validate.DeckNameIsReal(DeckList);
+
+        foreach(Pair p in DeckEdit.ListName){
+            cardNameList.Add(p.CardName.Name);
+            cardColorList.Add(p.CardName.Color);
+        }
+
         Menu.DisplayEditOptions();
         option = Menu.GetUserOption();
 
@@ -96,14 +108,14 @@ public static class Function{
                     sum = sum + p.getAmount();
                 }
                 while(sum<60){
-                    CardNew = Menu.GetUserCardInput();
+                    CardNew = Menu.GetUserCardInput(cardNameList, cardColorList);
                     PairNew = Menu.GetUserPairInput(CardNew);
                     DeckEdit.ListName.Add(PairNew);
                     sum = sum+PairNew.Amount;
                 }
                 break;
             case 3:
-                CardNew = Menu.GetUserCardInput();
+                CardNew = Menu.GetUserCardInput(cardNameList, cardColorList);
                 PairNew = Menu.GetUserPairInput(CardNew);
                 DeckEdit.ListName.Add(PairNew);
                 break;
