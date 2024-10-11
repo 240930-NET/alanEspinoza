@@ -20,10 +20,10 @@ public static class Function{
         //string dName = d.getDeckName();
         Console.WriteLine($"You are displaying your Cards from your {d.Name} deck.");
 
-        var table = new ConsoleTable("Card List");
+        var table = new ConsoleTable("Card Name",  "Amount" , "Card Color", "Inkability", "Card Type", "Ink Cost");
         List<Pair> cardList = d.getDeckCardList();
         foreach(Pair p in cardList){
-            table.AddRow($"{p.CardName.Name} : {p.Amount} : {p.CardName.Color}");
+            table.AddRow($"{p.CardName.Name}", $"{p.Amount}", $"{p.CardName.Color}", $"{p.CardName.Inkable}", $"{p.CardName.Type}", $"{p.CardName.InkCost}" );
         }
         table.Write();
         Console.WriteLine();
@@ -90,8 +90,18 @@ public static class Function{
                 //PairEdit = PairNew;
                 break;
             case 2:
+                int sum = 0;
                 PairEdit = Validate.CardNameIsReal(DeckEdit.ListName);
                 DeckEdit.ListName.Remove(PairEdit);
+                foreach(Pair p in DeckEdit.ListName){
+                    sum = sum + p.getAmount();
+                }
+                while(sum<60){
+                    CardNew = Menu.GetUserCardInput();
+                    PairNew = Menu.GetUserPairInput(CardNew);
+                    DeckEdit.ListName.Add(PairNew);
+                    sum = sum+PairNew.Amount;
+                }
                 break;
             case 3:
                 CardNew = Menu.GetUserCardInput();
@@ -102,12 +112,14 @@ public static class Function{
                 string? newDeckName = Menu.GetDeckName();
                 DeckEdit.Name = newDeckName;
                 break;
+            case 0:
+                break;
         }
 
     }
-    public static void SaveDeck(List<Deck> DeckList){
+    public static async void SaveDeck(List<Deck> DeckList){
         Console.WriteLine("You Saved all new changes!\n");
-        Serialize.SerializeDeckInfo(DeckList);
+        await Serialize.SerializeDeckInfo(DeckList);
     }
 
 }

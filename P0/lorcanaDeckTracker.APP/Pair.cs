@@ -2,8 +2,8 @@
 
 public class Pair{
 
-    public int Amount{get;set;}
-    public Card CardName{get;set;}
+    public int Amount{get;set;} =1;
+    public Card? CardName{get;set;}
 
     public Pair(int Amount, Card CardName){
 
@@ -15,7 +15,7 @@ public class Pair{
     public Pair(){
     }
 
-    public Card getCard(){
+    public Card? getCard(){
         return CardName;
     }
 

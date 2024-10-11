@@ -1,5 +1,5 @@
 // keep all my validation functions here
-
+using System;
 public static class Validate{
 
     public static Deck DeckNameIsReal(List<Deck> DeckList){
@@ -24,6 +24,17 @@ public static class Validate{
         return DeckReturn; 
     }
 
+    // public static bool DeckExistsInList(List<Deck> DeckList, string DeckNameCheck){
+
+    //     foreach(Deck d in DeckList){
+    //         if(d.getDeckName()==DeckNameCheck){
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+
+    // }
+
     public static Pair CardNameIsReal(List<Pair> PairList){
         string UserPairNameCheck;
         bool PairNameReal = false;
@@ -46,5 +57,71 @@ public static class Validate{
         return PairReturn; 
     }
 
+    public static bool OptionsIsValid(string option){
+        string[] validOptions = {"0","1","2","3","4","5"};
+        int pos = Array.IndexOf(validOptions, option);
+        if(pos>-1){
+            return true;
+        }
+        return false;
+    }
+
+    public static bool OptionIsTrueOrFalse(string option){
+        option = option.ToLower();
+        string[] validOptions = {"true", "false"};
+        int pos = Array.IndexOf(validOptions, option);
+        if(pos>-1){
+            return true;
+        }
+        return false;
+    }
+    public static bool ColorIsValid(string color){
+        color = color.ToLower();
+        string[] validColors = {"amethyst", "emerald", "ruby", "steel", "amber", "sapphire"};
+        int pos = Array.IndexOf(validColors, color);
+        if(pos>-1){
+            return true;
+        }
+        return false;
+    }
+
+    //public static bool CardNameIsValid(string cardName){}
+    //need to get card info from online
+
+    public static bool CardTypeIsValid(string cardType){
+        cardType = cardType.ToLower();
+        string[] validCardTypes = {"character","action","location","item"};
+        int pos = Array.IndexOf(validCardTypes, cardType);
+        if(pos>-1){
+            return true;
+        }
+        return false;
+    }
+
+    public static bool InkCostValid(string inkCost){
+        string[] validInkCost = {"0","1","2","3","4","5","6","7","8","9","10"};
+        int pos = Array.IndexOf(validInkCost, inkCost);
+        if(pos>-1){
+            return true;
+        }
+        return false;
+    }
+    public static bool CardAmountValid(string cardAmount){
+        string[] validCardAmounts = {"1","2","3","4"};
+        int pos = Array.IndexOf(validCardAmounts, cardAmount);
+        if(pos>-1){
+            return true;
+        }
+        return false;
+    }
+
+    public static bool EditOptionsIsValid(string option){
+        string[] validOptions = {"0","1","2","3","4"};
+        int pos = Array.IndexOf(validOptions, option);
+        if(pos>-1){
+            return true;
+        }
+        return false;
+    }
 }
 

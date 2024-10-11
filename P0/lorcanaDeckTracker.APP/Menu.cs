@@ -32,8 +32,14 @@ public static class Menu{
 
     //Method that asks for user input
     public static int GetUserOption(){
+        string? option;
         Console.WriteLine("Type in option from displayed above :");
-        int x = Int32.Parse(Console.ReadLine());
+        option = Console.ReadLine();
+        while(!Validate.OptionsIsValid(option)){
+            Console.WriteLine("Invalid try again:");
+            option = Console.ReadLine();
+        }
+        int x = Int32.Parse(option);
         Console.WriteLine("");
         return x;
     }
@@ -49,22 +55,51 @@ public static class Menu{
 
     public static bool DisplayCardListBool(){
         Console.WriteLine("Do you want to display the list of cards from the above deck?\n(true for yes, false for no)");
-        bool displayCardsBool = bool.Parse(Console.ReadLine());
+        string? cardDisplayOption = Console.ReadLine();
+        while(!Validate.OptionIsTrueOrFalse(cardDisplayOption)){
+            Console.WriteLine("Invalid try again:");
+            cardDisplayOption = Console.ReadLine();
+        }
+        bool displayCardsBool = bool.Parse(cardDisplayOption);
         Console.WriteLine("");
         return displayCardsBool;
     }
 
     public static Card GetUserCardInput(){
+
         Console.WriteLine("Type in card color:");
-        string newCardColor = Console.ReadLine();
+        string? newCardColor = Console.ReadLine();
+        while(!Validate.ColorIsValid(newCardColor)){
+            Console.WriteLine("Invalid color try again:");
+            newCardColor = Console.ReadLine();
+        }
+
         Console.WriteLine("Type in card name:");
-        string newCardName = Console.ReadLine();
+        string? newCardName = Console.ReadLine();
+        //still waiting to implement
+
         Console.WriteLine("Type true if inkable, false if not:");
-        bool newCardInkable = bool.Parse(Console.ReadLine());
+        string newCardInkableString = Console.ReadLine();
+        while(!Validate.OptionIsTrueOrFalse(newCardInkableString)){
+            Console.WriteLine("Invalid option try again:");
+            newCardInkableString = Console.ReadLine();
+        }
+        bool newCardInkable = bool.Parse(newCardInkableString);
+
         Console.WriteLine("Type in card type:");
-        string newCardType = Console.ReadLine();
+        string? newCardType = Console.ReadLine();
+        while(!Validate.CardTypeIsValid(newCardType)){
+            Console.WriteLine("Invalid card type try again:");
+            newCardType= Console.ReadLine();
+        }
+
         Console.WriteLine("Type in card ink cost:");
-        int newCardInkCost = Int32.Parse(Console.ReadLine());
+        string? newCardInkCostString = Console.ReadLine();
+        while(!Validate.InkCostValid(newCardInkCostString)){
+            Console.WriteLine("Invalid ink cost try again:");
+            newCardInkCostString = Console.ReadLine();
+        }
+        int newCardInkCost = Int32.Parse(newCardInkCostString);
         Card newCard = new Card(newCardColor, newCardName, newCardInkable, newCardType, newCardInkCost);
         return newCard;
     }
@@ -73,9 +108,12 @@ public static class Menu{
     // card returned from previous method
     public static Pair GetUserPairInput(Card newPairCard){
         Console.WriteLine("Type in amount of cards: ");
-        int newPairAmount = Int32.Parse(Console.ReadLine());
-        //Console.WriteLine("Type in card name: ");
-        //string newPairCardName = Console.ReadLine();
+        string newPairAmountString = Console.ReadLine();
+        while(!Validate.InkCostValid(newPairAmountString)){
+            Console.WriteLine("Invalid color try again:");
+            newPairAmountString = Console.ReadLine();
+        }
+        int newPairAmount = Int32.Parse(newPairAmountString);
         Pair newPair = new Pair(newPairAmount, newPairCard);
         return newPair;
     }
@@ -83,21 +121,27 @@ public static class Menu{
     public static Deck GetUserNewDeckInput(List<Pair> newListPair){
         Console.WriteLine("Type in Deck name: ");
         
-        string newDeckName = Console.ReadLine();
+        string? newDeckName = Console.ReadLine();
         Deck newDeck = new Deck(newDeckName, newListPair);
         return newDeck;
     }
 
     public static int GetUserKeepAddingCardsInput(int limit){
-        bool keepGoing = bool.Parse(Console.ReadLine());
-        if(keepGoing)limit = limit+1;
+
+        string? keepAddingCardsOption = Console.ReadLine();
+        while(!Validate.OptionIsTrueOrFalse(keepAddingCardsOption)){
+            Console.WriteLine("Invalid try again:");
+            keepAddingCardsOption = Console.ReadLine();
+        }
+        bool keepAddingCardsOptionBool = bool.Parse(keepAddingCardsOption);
+        if(keepAddingCardsOptionBool)limit = limit+1;
         else limit = 1;
         return limit;
     }
 
     public static string GetDeckName(){
         Console.WriteLine("Type in the name of the deck:");
-        string DeckDeleteName = Console.ReadLine();
+        string? DeckDeleteName = Console.ReadLine();
         return DeckDeleteName;
     }
 
@@ -107,6 +151,7 @@ public static class Menu{
         table.AddRow("2 : Delete card from list");
         table.AddRow("3 : Add card from list");
         table.AddRow("4 : Rename Deck");
+        table.AddRow("0 : Leave Deck Editor");
 
         //different format for more asthetic experience
         table.Write(Format.Minimal);
@@ -114,8 +159,21 @@ public static class Menu{
     }
     public static string GetPairName(){
         Console.WriteLine("Type in the name of the Card:");
-        string CardName = Console.ReadLine();
+        string? CardName = Console.ReadLine();
         return CardName;
+    }
+
+        public static int GetUserEditOption(){
+        string? option;
+        Console.WriteLine("Type in option from displayed above :");
+        option = Console.ReadLine();
+        while(!Validate.EditOptionsIsValid(option)){
+            Console.WriteLine("Invalid try again:");
+            option = Console.ReadLine();
+        }
+        int x = Int32.Parse(option);
+        Console.WriteLine("");
+        return x;
     }
 
 }

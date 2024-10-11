@@ -7,11 +7,11 @@ public class Card{
     //property that tracks card name
     public string? Name{get;set;}
     //property that tracks if the card game is inkable 
-    public bool Inkable{get;set;}
+    public bool Inkable{get;set;} = false;
     //property that tracks the type of card it is
     public string? Type{get;set;}
     //property that tracks the amount of ink needed to play this card
-    public int InkCost{get;set;}
+    public int InkCost{get;set;} = 1;
 
 
 
@@ -30,7 +30,7 @@ public class Card{
         return $"Color group: {Color}\n Card Name: {Name}\n Inkable: {Inkable}\n Type: {Type}\n Ink Cost: {InkCost}\n";
     }
 
-    public string getCardName(){
+    public string? getCardName(){
         return Name;
     }
 }
